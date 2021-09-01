@@ -57,6 +57,7 @@ public class main {
             for(int j=0;j<matriz.length;j++){
                 if(matriz[i][j]>alertar){
                     System.out.println("Alerta!!! se debe evacuar zona costera! "+matriz[i][j]);
+
                 }
             }
         }
@@ -64,7 +65,7 @@ public class main {
     }
 
     public static void mostrarMenu(){
-        System.out.println("Bienvenido");
+        System.out.println("Bienvenid@");
         System.out.println("[1] Generar sismos/terremoto");
         System.out.println("[2] Mostrar sismos/terremotos de mayor magnitud");
         System.out.println("[3] Mostrar sismo/terremoto mayores o iguales a 5.0");
