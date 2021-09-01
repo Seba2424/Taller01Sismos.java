@@ -5,7 +5,6 @@ public class main {
         double sismos [][]=new double[7][10];
         mostrarMenu();
         escogerOpcionMenu(sismos);
-
     }
     public static double [][] llenarMatriz(double matriz [][]){
 
@@ -25,7 +24,6 @@ public class main {
             resultado=resultado+"\n";
         }
         System.out.println(resultado);
-
     }
     public static double terremotoMayor(double matriz [][]){
         double mayor=matriz[0][0];
@@ -57,11 +55,9 @@ public class main {
             for(int j=0;j<matriz.length;j++){
                 if(matriz[i][j]>alertar){
                     System.out.println("Alerta!!! se debe evacuar zona costera! "+matriz[i][j]);
-
                 }
             }
         }
-
     }
 
     public static void mostrarMenu(){
@@ -94,16 +90,12 @@ public class main {
                         case 2:
                             terremotoMayor(sismos);
                             break;
-
-
                         case 3:
                             terremotoMayorA(sismos);
                             break;
-
                         case 4:
                             aletrarSMS(sismos);
                             break;
-
                         case 0:
                             break;
                     }
