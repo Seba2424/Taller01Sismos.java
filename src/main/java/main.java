@@ -72,10 +72,9 @@ public class main {
     public static boolean escogerOpcionMenu(double[][] sismos){
         Scanner teclado = new Scanner(System.in);
         System.out.println(" ");
-        int opcion=teclado.nextInt();
         boolean bandera=true;
         while (bandera=true){
-            switch (opcion){
+            switch (Validar(4)){
                 case 1:
                     llenarMatriz(sismos);
                     imprimirMatriz(sismos);
@@ -85,8 +84,7 @@ public class main {
                     System.out.println("[4] Enviar SMS por cada terremoto mayor o igual a 7.0");
                     System.out.println("");
                     System.out.println("[0] Salir");
-                    int opcion2=teclado.nextInt();
-                    switch (opcion2) {
+                    switch (Validar(4)) {
                         case 2:
                             terremotoMayor(sismos);
                             break;
@@ -107,5 +105,19 @@ public class main {
         }
         return bandera=false;
     }
-
+    public static int Validar(int x) {
+        int n = -1;
+        do {
+            Scanner teclado = new Scanner(System.in);
+            try {
+                n = teclado.nextInt();
+            } catch (Exception e) {
+                System.out.println("Error");
+            }
+            if (n < 0 || n > x) {
+                System.out.println("ingrese un numero valido");
+            }
+        } while (n < 0 || n > x);
+        return n;
+    }
 }
